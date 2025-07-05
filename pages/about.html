@@ -42,7 +42,7 @@
 
       <header id="header"></header>
       <script>
-        fetch("./components/header.html")
+        fetch("../components/header.html")
           .then(res => res.text())
           .then(data => {
             document.getElementById("header").innerHTML = data;
@@ -55,7 +55,7 @@
 
       <aside id="sidebar" class="left-sidebar"></aside>
       <script>
-        fetch("./components/sidebar.html")
+        fetch("../components/sidebar.html")
           .then(res => res.text())
           .then(data => {
             document.getElementById("sidebar").innerHTML = data;
@@ -70,9 +70,10 @@
 
         <section>
 
-          <h1>Home</h1>
-          <p>welcome to my website :3</p>
-
+          <h1>About</h1>
+          <p>hi!! and welcome to this silly little website i made.</p><br>
+          <p>i've been looking into the indie web recently and decided hey why not make my own website for no reason.</p><br>
+          <p>i plan on adding a lot of stuff here slowly but surely so stay tuned everyone!</p><br>
         </section>
 
       </main>
@@ -83,7 +84,7 @@
 
       <footer id="footer"></footer>
       <script>
-        fetch("./components/footer.html")
+        fetch("../components/footer.html")
           .then(res => res.text())
           .then(data => {
             document.getElementById("footer").innerHTML = data;
