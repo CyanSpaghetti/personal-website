@@ -202,6 +202,52 @@ header {
   height: auto;
 }
 
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--padding);
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  display: block;
+  width: 64px;
+  height: auto;
+}
+
+.site-title {
+  font-family: var(--heading-font);
+  font-size: 1.5em;
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+/* Optional: Improve nav spacing */
+header nav ul {
+  display: flex;
+  list-style: none;
+  gap: 16px;
+  padding: 0;
+  margin: 0;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: var(--link-color);
+  font-weight: bold;
+}
+
+header nav ul li a:hover {
+  color: var(--link-color-hover);
+}
+
+
 /* -------------------------------------------------------- */
 /* SIDEBARS */
 /* -------------------------------------------------------- */
