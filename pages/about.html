@@ -1,97 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+    <head>
 
-  <title>arashm's webpage</title>
+        <title>arashm's webpage</title>
 
-  <meta content="arashm's webpage" name="The personal website of ArashM." />
+        <meta content="arashm's webpage" name="The personal website of ArashM."/>
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <!-- FavIcon (small image in tab), change to any image you want: -->
-  <link href="/favicon.ico?v=1" rel="icon" type="image/x-icon" />
-  <!-- CSS: -->
-  <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css" if this HTML file is in 2 subfolders, etc. -->
-  <link href="/style.css" rel="stylesheet" />
+        <link href="/favicon.ico?v=1" rel="icon" type="image/x-icon"/>
+        <link href="/style.css" rel="stylesheet"/>
 
-  <script src="/index.js">
-    // Template generated with petrapixel's layout generator.
-    // (Please do not remove this credit.)
-    console.log("%c Template generated with petrapixel's layout generator.", "font-size: 14pt;");
-    console.log("%c https://petrapixel.neocities.org/coding/layout-generator", "font-size: 14pt;");
-  </script>
-</head>
+        <script src="/index.js">
+            console.log("%c Template generated with petrapixel's layout generator.", "font-size: 14pt;");
+            console.log("%c https://petrapixel.neocities.org/coding/layout-generator", "font-size: 14pt;");
+        </script>
+    </head>
 
-<body>
-  <div class="scanlines">
+    <body>
+        <div class="scanlines">
+            <a href="#content" id="skip-to-content-link">Skip to content</a>
 
-    <!-- The next line is a skip-to-content link for keyboard users. Do not remove it! -->
-    <a href="#content" id="skip-to-content-link">Skip to content</a>
+            <div class="layout">
 
-    <div class="layout">
 
-      <!-- =============================================== -->
-      <!-- HEADER -->
-      <!-- =============================================== -->
+                <header id="header"></header>
+                <script>
+                    fetch("/components/header.html").then(res => res.text()).then(data => {
+                        document.getElementById("header").innerHTML = data;
+                    });
+                </script>
 
-      <header id="header"></header>
-      <script>
-        fetch("/components/header.html")
-          .then(res => res.text())
-          .then(data => {
-            document.getElementById("header").innerHTML = data;
-          });
-      </script>
 
-      <!-- =============================================== -->
-      <!-- LEFT SIDEBAR -->
-      <!-- =============================================== -->
+                <aside id="sidebar" class="left-sidebar"></aside>
+                <script>
+                    fetch("/components/sidebar.html").then(res => res.text()).then(data => {
+                        document.getElementById("sidebar").innerHTML = data;
+                    });
+                </script>
 
-      <aside id="sidebar" class="left-sidebar"></aside>
-      <script>
-        fetch("/components/sidebar.html")
-        .then(res => res.text())
-        .then(data => {
-          document.getElementById("sidebar").innerHTML = data;
-        });
-      </script>
+                <main
+                    id="content">
+                    <!-- Do NOT remove the ID here -->
 
-      <main id="content"> <!-- Do NOT remove the ID here -->
 
-        <!-- =============================================== -->
-        <!-- MAIN CONTENT -->
-        <!-- =============================================== -->
+                    <section>
 
-        <section>
+                        <h1>about</h1>
+                        <p>hi!! and welcome to this silly little website i made.</p><br>
+                        <p>i've been looking into the indie web and decided hey why not make my own website for no reason (personal expression is very important to me and i realized the only way i can get something out on my own terms that i can edit whenever i please is on a website that i myself own!)
+                        </p><br>
+                        <p>i plan on adding a lot of stuff here slowly but surely so stay tuned everyone!</p><br>
+                    </section>
 
-          <h1>about</h1>
-          <p>hi!! and welcome to this silly little website i made.</p><br>
-          <p>i've been looking into the indie web recently and decided hey why not make my own website for no reason.</p><br>
-          <p>i plan on adding a lot of stuff here slowly but surely so stay tuned everyone!</p><br>
-        </section>
+                </main>
 
-      </main>
 
-      <!-- =============================================== -->
-      <!-- FOOTER -->
-      <!-- =============================================== -->
+                <footer id="footer"></footer>
+                <script>
+                    fetch("/components/footer.html").then(res => res.text()).then(data => {
+                        document.getElementById("footer").innerHTML = data;
+                    });
+                </script>
 
-      <footer id="footer"></footer>
-      <script>
-        fetch("/components/footer.html")
-          .then(res => res.text())
-          .then(data => {
-            document.getElementById("footer").innerHTML = data;
-          });
-      </script>
-
-      <!-- Closing .layout: -->
-    </div>
-
-    <!-- Add any additional Javascript code (<script></script>) here. -->
-</body>
-</div>
-
+            </div>
+        </div>
+    </body>
 </html>

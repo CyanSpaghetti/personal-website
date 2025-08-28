@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <title>arashm's webpage</title>
+
+        <meta content="arashm's webpage" name="The personal website of ArashM."/>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <link href="/favicon.ico?v=1" rel="icon" type="image/x-icon"/>
+        <link href="/style.css" rel="stylesheet"/>
+
+        <script src="/index.js">
+            console.log("%c Template generated with petrapixel's layout generator.", "font-size: 14pt;");
+            console.log("%c https://petrapixel.neocities.org/coding/layout-generator", "font-size: 14pt;");
+        </script>
+    </head>
+
+    <body>
+        <div class="scanlines">
+
+            <a href="#content" id="skip-to-content-link">Skip to content</a>
+
+            <div class="layout">
+
+                <header id="header"></header>
+                <script>
+                    fetch("/components/header.html").then(res => res.text()).then(data => {
+                        document.getElementById("header").innerHTML = data;
+                    });
+                </script>
+
+                <aside id="sidebar" class="left-sidebar"></aside>
+                <script>
+                    fetch("/components/sidebar.html").then(res => res.text()).then(data => {
+                        document.getElementById("sidebar").innerHTML = data;
+                    });
+                </script>
+
+                <main id="content">
+
+                    <section>
+                        <h1>
+                            coding
+                        </h1>
+                        <p>
+                            i've been programming since i was 11 years old.
+                            <br>i started out with basic guis and games in
+                            <a href="https://www.python.org/">
+                                python3</a>,
+                                                                                                                                                                                                                                                             using
+                            <a href="https://docs.python.org/3/library/tkinter.html">tkinter</a>
+                            and
+                            <a href="https://www.pygame.org/news">pygame</a>.
+                            <br><br>
+                            i decided to get into game development more, starting with
+                            <a href="https://unity.com/">unity</a>.
+                            <br>
+                            i learned
+                            <a href="https://learn.microsoft.com/en-us/dotnet/csharp/">c#</a>
+                            for game dev and made
+                            <a href="https://cyanspaghetti.itch.io/">my itch.io page</a>.
+                            <br>
+                            participating in gamejams was a great learning opportunity as wel as a test of my skill.
+                            <br><br>
+                            my interests led me to learn more about
+                            <a href="https://learn.microsoft.com/en-us/dotnet/">dotnet</a>
+                            as well as
+                            <a href="https://www.linux.org/">linux</a>.
+                            <br><br>
+                            eventually i went lowerlevel and picked up
+                            <a href="https://www.c-language.org/">c</a>,
+                            <a href="https://cplusplus.com/">c++</a>, and finally
+                            <a href="https://www.rust-lang.org/">rust</a>.
+                            <br>
+                            i learned
+                            <a href="https://godotengine.org/">godot</a>
+                            soon after the unity runtime fee changes were announced.
+                            <br><br>
+                            afterwards i wanted to expand my horizons and got into graphics programming, ai, web development, commandline tools, and electronics!
+                            <br><br>
+                            after years of experience i feel like my passion lies in game dev.
+                            <br>
+                            so that's what i'm doing these days! (july 2025)
+                        </p>
+                    </section>
+                    <section>
+                        <h1>skills</h1>
+                        <h3>languages</h3>
+                        <p>
+                            <ul>
+                                <li>rust</li>
+                                <li>python</li>
+                                <li>gdscript</li>
+                                <li>c/c++</li>
+                                <li>c#</li>
+                            </ul>
+                        </p>
+                        <h3>tools</h3>
+                        <p>
+                            <ul>
+                                <li>gnu/linux</li>
+                                <li>unity engine</li>
+                                <li>godot engine</li>
+                                <li>dotnet</li>
+                                <li>git</li>
+                                <li>raspberry pi</li>
+                                <li>docker</li>
+                            </ul>
+                        </p>
+                    </section>
+
+                </main>
+
+                <footer id="footer"></footer>
+                <script>
+                    fetch("/components/footer.html").then(res => res.text()).then(data => {
+                        document.getElementById("footer").innerHTML = data;
+                    });
+                </script>
+            </div>
+        </div>
+    </body>
+</html>

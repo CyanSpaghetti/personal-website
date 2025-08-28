@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <title>arashm's webpage</title>
+
+        <meta content="arashm's webpage" name="The personal website of ArashM."/>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+        <link href="/favicon.ico?v=1" rel="icon" type="image/x-icon"/>
+        <link href="/style.css" rel="stylesheet"/>
+        <script src="/index.js">
+            console.log("%c Template generated with petrapixel's layout generator.", "font-size: 14pt;");
+            console.log("%c https://petrapixel.neocities.org/coding/layout-generator", "font-size: 14pt;");
+        </script>
+    </head>
+
+    <body>
+        <div class="scanlines">
+
+            <a href="#content" id="skip-to-content-link">Skip to content</a>
+
+            <div class="layout">
+
+                <header id="header"></header>
+                <script>
+                    fetch("/components/header.html").then(res => res.text()).then(data => {
+                        document.getElementById("header").innerHTML = data;
+                    });
+                </script>
+
+
+                <aside id="sidebar" class="left-sidebar"></aside>
+                <script>
+                    fetch("/components/sidebar.html").then(res => res.text()).then(data => {
+                        document.getElementById("sidebar").innerHTML = data;
+                    });
+                </script>
+
+                <main id="content">
+
+                    <section>
+                        <h1>
+                            music
+                        </h1>
+                    </section>
+
+                    <section>
+                        <h2>theory</h2>
+                        <p>i'm using <a href="https://viva.pressbooks.pub/openmusictheory/" target="_blank">OpenMusicTheory's textbook</a> and making notes here!</p>
+                        <p>
+                            <ul>
+                                <li>a gap between notes played at the same time of a whole number is a "generic interval"</li>
+                                <li>a major scale is a collection of WWHWWWH steps</li>
+                            </ul>
+                        </p>
+                    </section>
+                    
+                     <section>
+                        <h2>my music</h2>
+                        <p>nothing here yet!</p>
+                    </section>
+
+                    <section>
+                        <h2>i like to listen to:</h2>
+                        <p>
+                            <ul>
+                                <li>$undown</li>
+                                <li>alvvays</li>
+                                <li>austenyo</li>
+                                <li>black country, new road</li>
+                                <li>black eyed peas</li>
+                                <li>britney spears</li>
+                                <li>carpenter brut</li>
+                                <li>charli xcx</li>
+                                <li>clairo</li>
+                                <li>daft punk</li>
+                                <li>dawid podsiadlo</li>
+                                <li>digitalism</li>
+                                <li>fcukers</li>
+                                <li>golemm</li>
+                                <li>heaven pierce her</li>
+                                <li>jazz emu</li>
+                                <li>joji</li>
+                                <li>kali uchis</li>
+                                <li>keygen church</li>
+                                <li>kitty craft</li>
+                                <li>los campesinos!</li>
+                                <li>ludowic</li>
+                                <li>mega drive</li>
+                                <li>meganeko</li>
+                                <li>MF DOOM</li>
+                                <li>miley cyrus</li>
+                                <li>neil young</li>
+                                <li>paramore</li>
+                                <li>radiohead</li>
+                                <li>sewerslvt</li>
+                                <li>the booyah! kids</li>
+                                <li>tove lo</li>
+                                <li>the smiths</li>
+                                <li>the strokes</li>
+                                <li>vampire weekend</li>
+                            </ul>
+                        </p>
+                    </section>
+                </main>
+
+                <footer id="footer"></footer>
+                <script>
+                    fetch("/components/footer.html").then(res => res.text()).then(data => {
+                        document.getElementById("footer").innerHTML = data;
+                    });
+                </script>
+
+            </div>
+        </div>
+    </body>
+</html>

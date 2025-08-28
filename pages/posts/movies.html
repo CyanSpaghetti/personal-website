@@ -8,24 +8,22 @@
         <meta content="arashm's webpage" name="The personal website of ArashM."/>
 
         <meta charset="UTF-8">
-        <meta
-        name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
         <link href="/favicon.ico?v=1" rel="icon" type="image/x-icon"/>
-        <link href="/style.css" rel="stylesheet"/> <script src="/index.js">
+        <link href="/style.css" rel="stylesheet"/>
+        <script src="/index.js">
             console.log("%c Template generated with petrapixel's layout generator.", "font-size: 14pt;");
             console.log("%c https://petrapixel.neocities.org/coding/layout-generator", "font-size: 14pt;");
         </script>
     </head>
 
     <body>
-        <div
-            class="scanlines">
+        <div class="scanlines">
 
             <a href="#content" id="skip-to-content-link">Skip to content</a>
 
-            <div
-                class="layout">
+            <div class="layout">
 
                 <header id="header"></header>
                 <script>
@@ -44,18 +42,30 @@
 
                 <main id="content">
 
-                        <section><h1>
-                        header 1
-                        </h1><p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae amet obcaecati odio id esse provident,
-                                                                sed ad ipsam ab fugit iure, libero dolores molestiae temporibus quis nisi dolorum tempora? Assumenda!
-                    </p>
+                    <section>
+                        <h1>
+                            movies
+                        </h1>
+                    </section>
 
-                </section>
+                    <section>
+                        <h2>theory</h2>
+                        <p>
+                            i haven't had much luck finding a textbook for film theory but i haven't stopped looking just yet
+                        </p>
+                    </section>
 
+                    <section>
+                        <h2>i like to watch:</h2>
+                        <p>
+                            <ul>
+                                <li>pulp fiction</li>
+                            </ul>
+                        </p>
+                    </section>
                 </main>
 
-                <footer id="footer"> </footer>
+                <footer id="footer"></footer>
                 <script>
                     fetch("/components/footer.html").then(res => res.text()).then(data => {
                         document.getElementById("footer").innerHTML = data;
